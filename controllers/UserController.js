@@ -7,7 +7,7 @@ require('dotenv').config()
 // generate New share URL
 exports.generateLink = async (req, res) => {
   try {
-    let domain = 'http://localhost:3001/game/'
+    let domain = 'https://warland-umber.vercel.app/game/'
     let uniqueID = uuidv4()
     let createdLink = domain + uniqueID
     return res.status(201).json({ success: true, data: createdLink });
