@@ -96,7 +96,7 @@ exports.joinGame = async (req, res) => {
 // show all the user
 exports.showAllUser = async (req, res) => {
   try {
-    let getUsers = await User.find({})
+    let getUsers = await User.find({status: 1})
     return res.status(201).json({ success: true, data: getUsers });
 
 
