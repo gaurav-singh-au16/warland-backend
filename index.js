@@ -18,6 +18,10 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch((err) => console.error('Error connecting to MongoDB:', err.message));
 
 
+  app.get('/', (req, res) => {
+    res.status(201).json({success: true, data: "working successfully"})
+  })
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
